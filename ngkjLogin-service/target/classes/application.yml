@@ -1,0 +1,10 @@
+eureka:
+  client:
+    serviceUrl:
+      #该地址以实际发布为准
+      defaultZone: http://localhost:7777/EurekaRegisterCenter/eureka/
+server:
+  port: 8764
+spring:
+  application:
+    name: login-service

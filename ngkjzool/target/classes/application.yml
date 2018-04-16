@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7777/EurekaRegisterCenter/eureka/
+server:
+  port: 8769
+spring:
+  application:
+    name: service-zuul
+zuul:
+  routes:
+    api-a:
+      path: /api-login-service/**
+      service-id: login-service
+    api-b:
+      path: /api-login-client/**
+      service-id: login-client
